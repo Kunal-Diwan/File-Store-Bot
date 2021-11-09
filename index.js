@@ -40,7 +40,8 @@ bot.start(async(ctx)=>{
             parse_mode:'HTML',
             reply_markup:{
                 inline_keyboard:[
-                    [{text:'Search',switch_inline_query:''},{text:'Link',callback_data:'POP'}]
+                    [{text:'🔎 Search 🔎',switch_inline_query:''},{text:'🔗 Link 🔗',callback_data:'POP'}],
+                    [{text: '📢 Updates 📢', url: 't.me/DevelopedBots'}]
                 ]
             }
         })
@@ -72,16 +73,16 @@ bot.action('POP',(ctx)=>{
 //help
 
 bot.command('/help',(ctx)=>{
-    ctx.reply(`Hello <b>${ctx.from.first_name}</b> you can send me files and i will store and share link for that file to be used inside telegram\n\nYou can also use me for searching files contributed by various users,{
+    ctx.reply(`Hello <b>${ctx.from.first_name}</b> you can send me files and i will store and share link for that file to be used inside telegram\n\nYou can also use me for searching files contributed by various users`,{
         parse_mode:'HTML',
         reply_markup:{
             inline_keyboard:[
-                [{text:'🔔 Channel 🔔',url:'t.me/DevelopedBots'}]
+                [{text: '💬 Support 💬',url:'t.me/DevelopedBotz'}]
             ]
         }    
     })
     if(ctx.from.id==process.env.ADMIN){
-        ctx.reply('https://telegra.ph/Filesaver-Admin-commands-06-05')
+        ctx.reply('https://telegra.ph/File-Store-Bot-Admin-Commands-11-09')
     }
 })
 
